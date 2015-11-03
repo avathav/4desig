@@ -1,0 +1,41 @@
+/* Block 3a */
+/* ======================== */
+
+.uou-block-3a {
+  .clearfix();
+  position: relative;
+  display: block;
+  padding: round(@uou-line-height * .541) 0;
+  background: @uou-tertiary-color;
+
+  .secondary& {
+    background: @uou-secondary-color;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 0;
+    font-size: @uou-font-size-small;
+
+    .secondary& {
+      > li {
+        color: @uou-text-color-inverted;
+
+        &:after {
+          color: @uou-text-color-light;
+        }
+
+        a {
+          color: @uou-text-color-lighter;
+
+          &:hover {
+            color: @uou-primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    display: none;
+  }
+}

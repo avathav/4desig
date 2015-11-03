@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id                  :integer          not null, primary key
+#  is_display          :boolean
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  product_category_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_display: 
+
+two:
+  is_display: 

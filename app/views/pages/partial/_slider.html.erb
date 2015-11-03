@@ -1,0 +1,46 @@
+<% if @slider_items.any? %>
+    <div class="sb-slider-section default">
+
+      <!-- masterslider -->
+      <div class="master-slider ms-skin-default  app-master-slider-secondary" id="masterslider">
+        <% @slider_items.each do |slider|%>
+        <!-- new slide -->
+        <div class="ms-slide">
+
+          <!-- slide background -->
+          <%= image_tag slider.image.url(:big), data: { src: slider.image.url(:big)} %>
+          <!--<img src="masterslider/blank.gif" data-src="../img/slider-img/slider-bg-11.jpg" alt=""/>-->
+
+
+          <div class="ms-layer ms-caption" data-origin="ml" >
+            <div class="container">
+              <%if slider.lead %>
+                  <h1 class="very-large-heading">
+                    <strong><%=slider.title%></strong>
+                  </h1>
+              <% end %>
+              <%if slider.lead %>
+                <p class="text-uppercase italic-text-large"><%=slider.lead%></p>
+              <% end %>
+              <%if slider.link %>
+                <a class="btn btn-transparent mr10" href="<%=slider.link%>">Continue</a>
+              <% end %>
+
+            </div>
+
+
+          </div>
+        </div>
+        <!-- end of slide -->
+         <% end %>
+
+
+
+
+
+
+      </div>
+      <!-- end of masterslider -->
+
+    </div> <!-- end sb-slider-secton -->
+<% end %>

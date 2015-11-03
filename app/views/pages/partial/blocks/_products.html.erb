@@ -1,0 +1,44 @@
+<% if @products.any? %>
+    <div class="uou-demo-block zero-pb">
+
+      <h1 class="block-title"><%= t 'Realizations'%></h1>
+      <p class="block-secondary-title">
+        <%= t 'our_realizations'%>    </p>
+
+
+      <div class="uou-portfolio full-width">
+
+        <section id="portfolio" class="portfolio">
+          <div class="">
+            <div class="clearfix"></div>
+            <% if ProductCategory.all.any? %>
+                <ul class="filters col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <li><a data-filter="" class="btn active" href="#">All works</a></li>
+                  <% ProductCategory.all.each do |category| %>
+                      <li><a data-filter=".<%=category.category_anchor%>" class="btn" href="#"><%=category.title%></a></li>
+                  <% end %>
+                </ul>
+            <% end %>
+            <div class="clearfix"></div>
+            <div class="portfolio-filters-content">
+              <% @products.each do |product| %>
+                  <article class="<%= product.category_anchor %>">
+                    <a href="<%= product.default_picture_url :big %>" class="swipebox">
+                      <img src="<%= product.default_picture_url :medium %>" alt="" class="work img-responsive">
+
+                        <span class="overlay">
+                          <i class="fa fa-plus"></i>
+                          <b class="title"><strong><%= product.title %></strong><%= product.product_category %></b>
+                        </span>
+                    </a>
+                  </article>
+              <% end %>
+            </div>
+          </div>
+        </section>
+
+      </div> <!-- end uou-portfolio -->
+
+
+    </div>  <!--  end uou-demo-block -->
+<% end %>

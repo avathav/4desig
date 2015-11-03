@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: sliders
+#
+#  id                 :integer          not null, primary key
+#  is_displayed       :boolean
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string(255)
+#  image_content_type :string(255)
+#  image_file_size    :integer
+#  image_updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lead: MyText
+  link: MyString
+
+two:
+  lead: MyText
+  link: MyString

@@ -1,0 +1,28 @@
+<% if @team.any? %>
+    <div class="uou-demo-block tertiary">
+
+      <div class="container">
+        <div class="row">
+          <% @team.each do |member| %>
+              <div class="col-sm-6">
+                <div class="uou-block-6b secondary">
+                  <%= image_tag member.avatar.url(:medium) %>
+                  <ul class="social-icons">
+                    <%= raw "<li><a href='#{member.fb_link}'><i class='fa fa-facebook'></i></a></li>" unless member.fb_link.blank? %>
+                    <%= raw "<li><a href='#{member.twitter_link}'><i class='fa fa-twitter'></i></a></li>" unless member.twitter_link.blank? %>
+                    <%= raw "<li><a href='#{member.google_link}'><i class='fa fa-google-plus'></i></a></li>" unless member.google_link.blank? %>
+                  </ul>
+
+                  <div class="content">
+                    <h6><%= member.fullname%><span><%= member.position%></span></h6>
+                    <p><%= member.description%></p>
+                  </div>
+                </div> <!-- end .uou-block-6b -->
+              </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div> <!--   end uou-demo-block -->
+<% end %>

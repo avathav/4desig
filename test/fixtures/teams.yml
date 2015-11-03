@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: teams
+#
+#  id                  :integer          not null, primary key
+#  firstname           :string(255)
+#  surname             :string(255)
+#  fb_link             :string(255)
+#  twitter_link        :string(255)
+#  google_link         :string(255)
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  surname: MyString
+  fb_link: MyString
+  twiter_link: MyString
+  google_link: MyString
+
+two:
+  firstname: MyString
+  surname: MyString
+  fb_link: MyString
+  twiter_link: MyString
+  google_link: MyString

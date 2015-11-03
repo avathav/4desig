@@ -1,0 +1,31 @@
+<div class="uou-demo-block has-bg-image" data-bg-image="../img/contact-bg.jpg" data-bg-color="000" data-bg-opacity=".20">
+
+  <h1 class="block-title"><%= t 'contact_h1' %></h1>
+  <p class="block-secondary-title invert">
+    <%= t 'get_in_touch_with_us'%>    </p>
+
+  <div class="container">
+    <div class="demo-contact-form">
+      <div id="display_result"></div>
+      <!-- form -->
+      <%= simple_form_for(@contact, url: contact_send_path, :remote => true, :type => :json) do |f| %>
+          <%= f.input_field :name , :placeholder => I18n.t('contact.form.placeholder.name'), :label => false  %>
+          <%= f.input_field :surname , :placeholder => I18n.t('contact.form.placeholder.surname'), :label => false  %>
+          <%= f.input_field :email , :placeholder => I18n.t('contact.form.placeholder.email'), :label => false  %>
+          <%= f.input_field :phone , :placeholder => I18n.t('contact.form.placeholder.phone'), :label => false  %>
+          <%= f.input_field :message , :placeholder => I18n.t('contact.form.placeholder.message'), :label => false  %>
+          <div class="pb30">
+            <button id="contact_btn" class="btn btn-primary"><%= t 'send_message' %></button>
+          </div>
+      <% end %>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+</div>  <!--  end uou-demo-block -->
