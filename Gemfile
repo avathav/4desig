@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -33,6 +33,7 @@ gem 'annotate'
 gem 'globalize', '~> 5.0.0'
 gem 'activeadmin-globalize', '~> 1.0.0.pre', github: 'fabn/activeadmin-globalize', branch: 'develop'
 gem 'simple_form'
+gem 'rails_12factor'
 
 
 # Use ActiveModel has_secure_password
