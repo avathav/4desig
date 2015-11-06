@@ -153,6 +153,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.3)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     pundit (1.0.1)
@@ -256,6 +257,7 @@ DEPENDENCIES
   jquery-rails
   mysql2 (~> 0.3.18)
   paperclip (~> 4.3)
+  pg
   pundit
   rails (= 4.2.4)
   rails_12factor
