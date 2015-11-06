@@ -35,7 +35,7 @@ gem 'activeadmin-globalize', '~> 1.0.0.pre', github: 'fabn/activeadmin-globalize
 gem 'simple_form'
 gem 'rails_12factor'
 gem 'pg'
-
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
