@@ -53,4 +53,4 @@ production:
   pool: 5
   database: <%= ENV['FDB_NAME'] %>
   username: <%= ENV['FDB_USER'] %>
-    password: <%= ENV['fdb_password'] %>
+  password: <%= ENV['fdb_password'] %>
